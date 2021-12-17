@@ -59,26 +59,26 @@ export default function BaseLayout({ children }) {
                         user && 
                         <>
                             <Link href="/user">
-                            <a class="btn btn-sm bg-transparent border-0 mx-1">
+                            <a class="btn btn-sm bg-transparent border-0 mx-1 hover:glass">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                             </a>
                             </Link>
                             <a href="/api/auth/logout">
-                                <button class="group inline-flex items-center bg-red-500 border-0 py-1 px-3 focus:outline-none hover:bg-red-600 rounded text-base mt-4 md:mt-0">
-                                    <span className='group-hover:w-fit group-hover:invisible transiton duration-300'>Log Out</span>
+                                <button class="group inline-flex items-center btn btn-sm bg-red-500 border-0 py-1 px-3 focus:outline-none hover:glass hover:bg-red-600 rounded text-base mt-4 md:mt-0">
+                                    <span className=''>Log Out</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                                     </svg>
                                 </button>
                             </a>
-                            <label class="btn btn-sm btn-primary mx-2 sticky" onClick={() => chatOpen ? closeChat() : openChat()}>
+                            <button class="btn btn-sm btn-primary mx-2 sticky hover:glass hover:bg-primary-focus" onClick={() => chatOpen ? closeChat() : openChat()}>
                             chat
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                             </svg>
-                            </label>
+                            </button>
                         </>
                         }
                         
