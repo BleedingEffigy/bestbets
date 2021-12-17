@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Tweet } from 'react-twitter-widgets'
 
 export default function Home() {
 
@@ -40,9 +41,11 @@ export default function Home() {
         <h1 class="text-3xl text-center text-white mb-12">Tweet testimonials</h1>
           <div class="flex flex-wrap -m-4 justify-center">
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <Tweet tweetId='1469693588904755208'/>
               {/* <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Like anything in life, it’s all about the approach. Absolutely no fool’s errand.<br><br>Don’t listen to the experts, actually look at data and don’t play everything!<br><br>Me and all my guys at <a href="https://twitter.com/BestBetsAlgo?ref_src=twsrc%5Etfw">@BestBetsAlgo</a> been eating all year 🤷🏽‍♂️ </p>&mdash; BNA bettor (@KHBets615) <a href="https://twitter.com/KHBets615/status/1469693588904755208?ref_src=twsrc%5Etfw">December 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
             </div>
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <Tweet tweetId='1469547222622564364'/>
               {/* <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Hey! That&#39;s me! Seriously though. This Discord has so much to offer. From the models, to the bots, to the people. I can almost guarantee you&#39;ll make the $20 in the 7 day trial.</p>&mdash; Tyger (@TyTyger7) <a href="https://twitter.com/TyTyger7/status/1469547222622564364?ref_src=twsrc%5Etfw">December 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
             </div>
           </div>
@@ -57,7 +60,7 @@ export default function Home() {
           </div>
         <div class="container pb-5 py-24 mx-auto flex flex-wrap lg:w-4/5">
           <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-            <img alt="feature" class="object-cover object-center" src="https://bestbetsalgo.vercel.app/assets/BestBetsPick1.jpg"/>
+            <img alt="feature" class="object-cover object-center" src="https://props.cash/pick-min.png"/>
           </div>
           <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
             <div class="flex flex-col mb-10 lg:items-start items-center">
