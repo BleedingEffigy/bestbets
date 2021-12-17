@@ -1,18 +1,36 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+const [chatWidth, setChatWidth] = useState(0)
+  
+  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+  function openNav() {
+    document.getElementById("chatbox").style.width = "50%";
+    // document.getElementById("main").style.marginLeft = "50%";
+  }
+
+  const openChat = () => {
+    
+  }
+
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+  function closeChat() {
+    document.getElementById("chatbox").style.width = "0";
+    // document.getElementById("main").style.marginLeft = "0";
+  }
+
   return (
-    <div className="bg-gray-900 drawer relative">
+    <div className="bg-gray-900 relative">
       <Head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width"/>
         <title>Best Bets Algo</title>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-    <input id="my-drawer" type="checkbox" class="drawer-toggle"/> 
-    <main class="drawer-content">
+    <main id="main" class="overflow-hidden">
       <header class="sticky top-0 z-30">
         {/* <!-- Nav --> */}
         <div class="text-white bg-gray-900/70 body-font">
@@ -32,7 +50,7 @@ export default function Home() {
               </svg>
             </button>
             
-            <label for="my-drawer" class="btn btn-sm btn-primary drawer-button mx-2 sticky">open chat</label>
+            <label class="btn btn-sm btn-primary mx-2 sticky" onClick={() => openNav()}>open chat</label>
 
           </div>
         </div>
@@ -232,10 +250,24 @@ export default function Home() {
     </main>
 
     {/* Chatbox sidebar */}
-    <div class="drawer-side mb-10">
-      <label for="my-drawer" class="drawer-overlay"></label> 
-      <section class="text-gray-400 bg-transparent body-font md:w-1/2">
-        <div class="flex justify-center h-1/2 md:h-full">
+    <div id="chatbox" class="mb-10 z-50" 
+          style={{'height': '100%',
+          'width': 0,
+          'position': 'fixed',
+          'z-index': 1,
+          'top': 0,
+          'left': 0,
+         ' backgroundColor': '#111',
+          'overflow-x': 'hidden',
+         ' transition': '0.5s'}}
+    >
+      <section class="text-gray-400 bg-transparent body-font relative">
+        <button class="btn glass border-0 absolute top-0 right-0" onClick={() => closeChat()}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="flex justify-center md:h-screen">
           {/* <!-- <div class="blur-sm relative">
             <img src="/assets/DiscordChat.png"/>
 
@@ -250,18 +282,6 @@ export default function Home() {
         </div>
       </section>
     </div>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
