@@ -1,22 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  const [chatOpen, setChatOpen] = useState(false)
-  
-
-
-  const openChat = () => {
-    
-  }
-
-  /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-  function closeChat() {
-    document.getElementById("chatbox").style.width = "0";
-    // document.getElementById("main").style.marginLeft = "0";
-  }
 
   return (
     <>
