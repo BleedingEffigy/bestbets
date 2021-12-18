@@ -24,7 +24,7 @@ export default function Home() {
             <div class="flex w-full md:justify-start justify-center items-end">
               <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
                 <label htmlFor="hero-field" class="leading-7 text-sm text-gray-400">Email</label>
-                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-l-lime-500 border-0 border-l-4 focus:ring-2 focus:ring-blue-900 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-l-yellow-200 border-0 border-l-4 focus:ring-2 focus:ring-blue-900 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
               </div>
               <button class="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Button</button>
             </div>
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
           <div class="flex flex-wrap -m-4 justify-center">
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-lime-500">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-yellow-200">
                 <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">BUSINESS</h2>
                 <h1 class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                   <span>$19</span>
@@ -155,7 +155,7 @@ export default function Home() {
               </div>
             </div>
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-lime-500">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-yellow-200">
                 <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">SPECIAL</h2>
                 <h1 class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                   <span>$199</span>
