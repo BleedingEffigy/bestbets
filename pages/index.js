@@ -23,8 +23,8 @@ export default function Home() {
             <p class="mb-8 leading-relaxed">NBA | NFL | MLB | NHL</p>
             <div class="flex w-full md:justify-start justify-center items-end">
               <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
-                <label for="hero-field" class="leading-7 text-sm text-gray-400">Email</label>
-                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-gray-700 focus:ring-2 focus:ring-blue-900 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+                <label htmlFor="hero-field" class="leading-7 text-sm text-gray-400">Email</label>
+                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-l-lime-500 border-0 border-l-4 focus:ring-2 focus:ring-blue-900 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
               </div>
               <button class="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Button</button>
             </div>
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
           <div class="flex flex-wrap -m-4 justify-center">
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-lime-500">
                 <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">BUSINESS</h2>
                 <h1 class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                   <span>$19</span>
@@ -128,34 +128,34 @@ export default function Home() {
                 </h1>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Vexillologist pitchfork
                 </p>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Tumeric plaid portland
                 </p>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Hexagon neutra unicorn
                 </p>
                 <button class="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">Pick this plan
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                  <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
                 </button>
               </div>
             </div>
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
+              <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-lime-500">
                 <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">SPECIAL</h2>
                 <h1 class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                   <span>$199</span>
@@ -163,41 +163,41 @@ export default function Home() {
                 </h1>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Vexillologist pitchfork
                 </p>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Tumeric plaid portland
                 </p>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Hexagon neutra unicorn
                 </p>
                 <p class="flex items-center text-gray-400 mb-2">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Vexillologist pitchfork
                 </p>
                 <p class="flex items-center text-gray-400 mb-6">
                   <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
                       <path d="M20 6L9 17l-5-5"></path>
                     </svg>
                   </span>Mixtape chillwave tumeric
                 </p>
                 <button class="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-700 rounded">Pick this plan
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                  <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                   </svg>
                 </button>

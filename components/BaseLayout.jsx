@@ -22,7 +22,7 @@ export default function BaseLayout({ children }) {
         <>
             {/* Main Body */}
             <div className="bg-gray-900 relative">
-                <header class="sticky top-0 z-30">
+                <header class="sticky border-t-4 border-t-lime-500 top-0 z-30">
                     {/* <!-- Nav --> */}
                     <div class="text-white bg-gray-900/70 body-font">
                         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -40,7 +40,7 @@ export default function BaseLayout({ children }) {
                                 <a href="/api/auth/login">
                                     <button class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-500 rounded text-base mt-4 md:mt-0">
                                     Log In
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                    <svg fill="none" stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
                                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                                     </svg>
                                     </button>
