@@ -17,16 +17,13 @@ export default function Home() {
 
       {/* <!-- Hero --> */}
       <section class="text-gray-400 bg-gray-900 body-font lg:relative">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center lg:w-5/6 lg:min-h-screen">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center lg:w-5/6 lg:min-h-[85vh]">
           <div class=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center z-10">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Bet on Sports using Data Science</h1>
-            <p class="mb-8 leading-relaxed">NBA | NFL | MLB | NHL</p>
+            <img className='w-12 h-12 mb-8' src='https://pbs.twimg.com/profile_images/1328476463083958273/LK-XBkNw_400x400.jpg'/>
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-semibold text-white">Bet on Sports using Data Science</h1>
+            <p class="mb-8 text-xl leading-relaxed">NBA | NFL | MLB | NHL</p>
             <div class="flex w-full md:justify-start justify-center items-end">
-              <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
-                <label htmlFor="hero-field" class="leading-7 text-sm text-gray-400">Email</label>
-                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-l-yellow-200 border-0 border-l-4 focus:ring-2 focus:ring-blue-900 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
-              </div>
-              <button class="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Button</button>
+              <button class="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Sign Up</button>
             </div>
           </div>
           <div class="lg:max-w-4xl z-0 lg:w-full md:w-1/2 w-5/6 lg:mt-24 lg:absolute lg:inset-y-0 lg:-right-1/4 xl:-right-12">
@@ -36,9 +33,9 @@ export default function Home() {
       </section>
 
       {/* <!-- Testimonial --> */}
-      <section class="text-gray-400 bg-gray-900 body-font">
-        <div class="container px-5 mt-5 pb-24 mx-auto">
-        <h1 class="text-3xl text-center text-white mb-12">Tweet testimonials</h1>
+      <section class="text-gray-400 bg-gray-800 body-font">
+        <div class="container px-5 pt-5 pb-24 mx-auto">
+        <h1 class="text-3xl text-center text-white mb-12">Twitter testimonials</h1>
           <div class="flex flex-wrap -m-4 justify-center">
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
               <Tweet tweetId='1469693588904755208'/>
@@ -53,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* <!-- Features --> */}
-      <section class="text-gray-400 bg-gray-900 body-font mx-auto">
+      <section class="text-gray-400 bg-gray-900 body-font mx-auto pt-8">
         <div class="text-center w-3/5 mx-auto">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">A science based approach to betting using data points you would've never even thought about</h1>
             <p class="text-xl leading-relaxed text-gray-400 text-opacity-80">The average bettor researches between 3-8 data points when making decisions; our prediction model researches over 100 data points from each sports, down to the individual player level.</p>
@@ -112,7 +109,7 @@ export default function Home() {
 
 
       {/* <!-- Pricing --> */}
-      <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+      <section class="text-gray-400 bg-gray-800 body-font overflow-hidden">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Subscription</h1>

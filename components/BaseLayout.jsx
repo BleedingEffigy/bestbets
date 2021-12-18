@@ -25,11 +25,10 @@ export default function BaseLayout({ children }) {
                 <header class="sticky border-t-4 border-t-lime-500 top-0 z-30">
                     {/* <!-- Nav --> */}
                     <div class="text-white bg-gray-900/70 body-font">
-                        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                        <div class="container mx-auto flex flex-wrap py-1 flex-col md:flex-row items-center">
                             <Link href="/">
                                 <a class="flex title-font font-medium items-center text-white mb-4 p-1 md:mb-0 transition ease-in-out hover:scale-110 rounded">
-                                    <img className='w-12 h-12' src='https://pbs.twimg.com/profile_images/1328476463083958273/LK-XBkNw_400x400.jpg'/>
-                                    <span class="ml-3 text-xl">BestBetsAlgo</span>
+                                    <span class="text-2xl text-lime-500 font-semibold">BestBetsAlgo</span>
                                 </a>
                             </Link>
                             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
