@@ -52,8 +52,8 @@ export default function Home() {
       {/* <!-- Features --> */}
       <section class="text-gray-400 bg-gray-900 body-font mx-auto pt-8">
         <div class="text-center w-3/5 mx-auto">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">A science based approach to betting using data points you would've never even thought about</h1>
-            <p class="text-xl leading-relaxed text-gray-400 text-opacity-80">The average bettor researches between 3-8 data points when making decisions; our prediction model researches over 100 data points from each sports, down to the individual player level.</p>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font text-white mb-4">A science based approach to betting using data points you would've never even thought about</h1>
+            <p class="text-xl leading-relaxed font-medium text-gray-400 text-opacity-80">The average bettor researches between 3-8 data points when making decisions; our prediction model researches over 100 data points from each sports, down to the individual player level.</p>
           </div>
         <div class="container pb-5 py-24 mx-auto flex flex-wrap lg:w-4/5">
           <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
@@ -69,7 +69,7 @@ export default function Home() {
 
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-white text-lg title-font font-medium mb-3">Easy to use</h2>
+                <h2 class="text-white text-lg title-font font-semibold mb-3">Easy to use</h2>
                 <p class="leading-relaxed text-base">Our models push out easy to read guides to tell you what is favored to win, based on our machine-learning models.</p>
                 <p class="leading-relaxed text-base">Have a free bet, boost, or risk-free bet? Use our custom software to see how you can make the most out of that bet!</p>
               </div>
@@ -77,28 +77,28 @@ export default function Home() {
 
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-white text-lg title-font font-medium mb-3">Continuously improving</h2>
+                <h2 class="text-white text-lg title-font font-semibold mb-3">Continuously improving</h2>
                 <p class="leading-relaxed text-base">Our machine-learning prediction model uses data that dates back 5+ years in each sport. It also updates weekly from the most recent games played to get a better understanding of how games and players are performing NOW!</p>
               </div>
             </div>
 
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-white text-lg title-font font-medium mb-3">Data on data on data</h2>
+                <h2 class="text-white text-lg title-font font-semibold mb-3">Data on data on data</h2>
                 <p class="leading-relaxed text-base">Like team and player props? Be sure to stay tuned to check out our prop bot, coming soon!</p>
               </div>
             </div>
             
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-white text-lg title-font font-medium mb-3">The science</h2>
+                <h2 class="text-white text-lg title-font font-semibold mb-3">The science</h2>
                 <p class="leading-relaxed text-base">Data science is easily becoming the most important tool in the world. What a better way to use it in one of the most data driven businesses in the world? Our machine-learning models continuously weigh the most important data points and adjust accordingly to what is important and what is not important to help guide you to better bets. We are not cappers. We use science to help guide you to make more informed wagers!</p>
               </div>
             </div>
 
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-white text-lg title-font font-medium mb-3">A family</h2>
+                <h2 class="text-white text-lg title-font font-semibold mb-3">A family</h2>
                 <p class="leading-relaxed text-base">When we say family, we don't mean the people who built the site or models. We mean the community who have been with us since our discord days from the beginning! We have people that bleed props. We have people that get insider info to how players are feeling, how teams lost sleep, and any other random thing you might could think of-- we've seen and heard it all. If you'd like to join our discord chat, we have our chat built right into the website, so you have everything in one place!</p>
               </div>
             </div>
@@ -112,14 +112,14 @@ export default function Home() {
       <section class="text-gray-400 bg-gray-800 body-font overflow-hidden">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Subscription</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">2 plans to choose from</p>
+            <h1 class="sm:text-4xl text-3xl font-bold title-font mb-2 text-white">Subscription</h1>
+            <p class="lg:w-2/3 mx-auto text-xl leading-relaxed text-base">2 plans to choose from</p>
           </div>
           <div class="flex flex-wrap -m-4 justify-center">
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
               <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-yellow-200">
-                <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">BUSINESS</h2>
-                <h1 class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+                <h2 class="text-sm tracking-widest text-gray-500 title-font mb-1 font-medium">BUSINESS</h2>
+                <h1 class="text-7xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                   <span>$19</span>
                   <span class="text-lg ml-1 font-normal text-gray-400">/mo</span>
                 </h1>
@@ -153,8 +153,8 @@ export default function Home() {
             </div>
             <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
               <div class="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-yellow-200">
-                <h2 class="text-sm tracking-widest text-gray-400 title-font mb-1 font-medium">SPECIAL</h2>
-                <h1 class="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+                <h2 class="text-sm tracking-widest text-gray-500 title-font mb-1 font-medium">SPECIAL</h2>
+                <h1 class="text-7xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                   <span>$199</span>
                   <span class="text-lg ml-1 font-normal text-gray-400">/yr</span>
                 </h1>
