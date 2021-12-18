@@ -25,65 +25,63 @@ export default function BaseLayout({ children }) {
                 <header class="sticky top-0 z-30">
                     {/* <!-- Nav --> */}
                     <div class="text-white bg-gray-900/70 body-font">
-                    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                        <Link href="/">
-                            <a class="flex title-font font-medium items-center text-white mb-4 p-1 md:mb-0 hover:bg-gray-600 rounded">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                                </svg>
-                                <span class="ml-3 text-xl">BestBetsAlgo</span>
-                            </a>
-                        </Link>
-                        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        </nav>
-                        { 
-                        !user &&
-                        <>
-                            <a href="/api/auth/login">
-                                <button class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-500 rounded text-base mt-4 md:mt-0">
-                                Log In
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                </svg>
+                        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                            <Link href="/">
+                                <a class="flex title-font font-medium items-center text-white mb-4 p-1 md:mb-0 transition ease-in-out hover:scale-110 rounded">
+                                    <img className='w-12 h-12' src='https://pbs.twimg.com/profile_images/1328476463083958273/LK-XBkNw_400x400.jpg'/>
+                                    <span class="ml-3 text-xl">BestBetsAlgo</span>
+                                </a>
+                            </Link>
+                            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                            </nav>
+                            { 
+                            !user &&
+                            <>
+                                <a href="/api/auth/login">
+                                    <button class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-500 rounded text-base mt-4 md:mt-0">
+                                    Log In
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                    </svg>
+                                    </button>
+                                </a>
+                                <button class="btn btn-sm bg-lime-500 no-animation mx-2 sticky hover:text-transparent hover:cursor-not-allowed">
+                                    chat
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                                    </svg>
                                 </button>
-                            </a>
-                            <button class="btn btn-sm btn-primary no-animation mx-2 sticky hover:text-transparent hover:cursor-not-allowed">
+                            </>
+                            }
+                            {
+                            user && 
+                            <>
+                                <Link href="/user">
+                                <a class="btn btn-sm bg-transparent border-0 mx-1 hover:glass">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                </a>
+                                </Link>
+                                <a href="/api/auth/logout">
+                                    <button class="group inline-flex items-center btn text-red-500 btn-outline btn-sm border-0 py-1 px-3 focus:outline-none hover:glass hover:bg-red-600 hover:text-gray-900 rounded text-base mt-4 md:mt-0">
+                                        <span className=''>Log Out</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                        </svg>
+                                    </button>
+                                </a>
+                                <button class="btn btn-sm bg-lime-500 mx-2 sticky hover:glass hover:bg-lime-600" onClick={() => chatOpen ? closeChat() : openChat()}>
                                 chat
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                                 </svg>
-                            </button>
-                        </>
-                        }
-                        {
-                        user && 
-                        <>
-                            <Link href="/user">
-                            <a class="btn btn-sm bg-transparent border-0 mx-1 hover:glass">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                            </a>
-                            </Link>
-                            <a href="/api/auth/logout">
-                                <button class="group inline-flex items-center btn btn-sm bg-red-500 border-0 py-1 px-3 focus:outline-none hover:glass hover:bg-red-600 rounded text-base mt-4 md:mt-0">
-                                    <span className=''>Log Out</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                                    </svg>
                                 </button>
-                            </a>
-                            <button class="btn btn-sm btn-primary mx-2 sticky hover:glass hover:bg-primary-focus" onClick={() => chatOpen ? closeChat() : openChat()}>
-                            chat
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                            </svg>
-                            </button>
-                        </>
-                        }
-                        
+                            </>
+                            }
+                            
 
-                    </div>
+                        </div>
                     </div>
 
                 </header>

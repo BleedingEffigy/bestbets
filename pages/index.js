@@ -26,7 +26,7 @@ export default function Home() {
                 <label for="hero-field" class="leading-7 text-sm text-gray-400">Email</label>
                 <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-800 rounded bg-opacity-40 border border-gray-700 focus:ring-2 focus:ring-blue-900 focus:bg-transparent focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
               </div>
-              <button class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+              <button class="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Button</button>
             </div>
           </div>
           <div class="lg:max-w-4xl z-0 lg:w-full md:w-1/2 w-5/6 lg:mt-24 lg:absolute lg:inset-y-0 lg:-right-1/4 xl:-right-12">
