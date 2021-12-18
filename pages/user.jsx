@@ -18,10 +18,10 @@ export default function User(){
                 <div className="w-full max-w-md w-full mx-auto bg-gray-900 border-4 border-gray-800 shadow-md rounded-md px-6 py-4 my-6">
                         <div className="sm:flex sm:justify-between">
                             <div className="flex items-center">
-                                <img className="h-12 w-12 rounded-full" src={user.picture} alt=""/>
+                                <img className="h-12 w-12 rounded-full" src={user?.picture} alt=""/>
                                 <div className="ml-2">
-                                    <h3 className="text-lg text-gray-100 font-medium">{user.name}</h3>
-                                    <span className="text-gray-600">{user.email}</span>
+                                    <h3 className="text-lg text-gray-100 font-medium">{user?.name}</h3>
+                                    <span className="text-gray-600">{user?.email}</span>
                                 </div>
                             </div>
                             <div className="mt-2 sm:mt-0">
