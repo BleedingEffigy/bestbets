@@ -5,9 +5,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <UserProvider> 
-      <BaseLayout>
         <Component {...pageProps} />
-      </BaseLayout>
     </UserProvider>
   )
 }
