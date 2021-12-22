@@ -11,7 +11,8 @@ export default function Dashboard(){
             'moneyLine':'Green Bay',
             'total':'Over 53.5',
             'moneyLineRank': '2',
-            'totalRank': '2'
+            'totalRank': '2',
+            isBestBet: true,
         },
         {
             'title': 'Washington Football Team@Philadelphia Eagles',
@@ -20,7 +21,8 @@ export default function Dashboard(){
             'moneyLine':'Philadelphia',
             'total':'Under 44.5',
             'moneyLineRank': '2',
-            'totalRank': '1'
+            'totalRank': '1',
+            isBestBet: true
         },
         {
             'title': 'Atlanta Falcons@San Francisco 49ers',
@@ -28,8 +30,9 @@ export default function Dashboard(){
             spreadRank: '1',
             'moneyLine':'Atlanta ',
             'total':'Over 45.5',
-            'moneyLineRank': '3',
-            'totalRank': '1'
+            'moneyLineRank': '2',
+            'totalRank': '1',
+            isBestBet: false
         },
         {
             'title': 'Cincinnati Bengals@Denver Broncos',
@@ -38,7 +41,8 @@ export default function Dashboard(){
             'moneyLine':'Cincinnati ',
             'total':'Over 44.0',
             'moneyLineRank': '1',
-            'totalRank': '3'
+            'totalRank': '3',
+            isBestBet: false
         },
         {
             'title': 'New Orleans Saints@Tampa Bay Buccaneers',
@@ -46,8 +50,9 @@ export default function Dashboard(){
             spreadRank: '2',
             'moneyLine':'New Orleans',
             'total':'Over 46.5',
-            'moneyLineRank': '2',
-            'totalRank': '3'
+            'moneyLineRank': '1',
+            'totalRank': '2',
+            isBestBet: false
         },
     ]
     const [chatOpen, setchatOpen] = useState(false)
@@ -95,8 +100,17 @@ export default function Dashboard(){
                     </div>
                 </div>
             </header>
+            {/* oepning banner */}
+            {/* <div className="bg-red-100 text-red-600 w-full">
+                <h1 class=" text-5xl font-bold">
+                    Model Picks
+                </h1> 
+                <p class="mb-5 py-4">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+                </p>
+            </div> */}
             <main className="bg-slate-800 mx-auto w-11/12">
-                    <section className="text-slate-400 bg-slate-800 body-font lg:relative py-8 px-12 z-50">
+                    <section className="text-slate-400 bg-slate-800 body-font lg:relative pb-8 px-12 z-50">
                         {/* dropdown */}
                         <div class="dropdown mb-4">
                             <div tabindex="0" class="m-1 btn bg-slate-700">League
@@ -145,7 +159,9 @@ export default function Dashboard(){
                                 cardContent.map( (card,idx) => 
                                     <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
                                         {/* badge */}
+                                        { card.isBestBet && 
                                         <div class="badge mx-2 bg-transparent font-bold text-red-600 border-0 bg-red-100 absolute top-2 right-1 z-40">Best Bet</div>
+                                        }
                                         <div class="card-body bg-slate-700 relative">
                                             {/* banner text */}
                                             <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
