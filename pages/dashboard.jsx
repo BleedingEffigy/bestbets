@@ -81,7 +81,7 @@ export default function Dashboard(){
             </header>
             <main className="bg-gray-800 mx-auto w-11/12">
                     <section className="text-gray-400 bg-gray-900 body-font lg:relative py-8 px-12 z-50">
-                        <div className="flex flex-wrap justify-around">
+                        <div className="flex flex-wrap justify-start">
                             {   
                                 cardContent.map( (card,idx) => 
                                     <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
@@ -97,11 +97,13 @@ export default function Dashboard(){
                                             <div className="bg-gradient-to-br from-lime-300 via-lime-300 to-lime-100 absolute -mx-4 -top-3 w-full h-1/3 z-0"></div>
                                             {/* stats chart */}
                                             <div className="flex flex-col font-semibold text-gray-900 p-1 rounded-lg bg-gray-700 shadow-md z-10">
+                                                {/* Spread Chart */}
                                                 <div className="flex flex-row p-2 bg-gray-700 border-b-gray-600 border-b text-gray-300 min-w-full">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>
                                                     <div className="text-gray-400 font-medium tracking-tight">Spread</div>
+                                                    {/* conditional render dependent on spread rank */}
                                                     {card.spreadRank == 3 && 
                                                         <div className="stat-rank-3">
                                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,6 +117,7 @@ export default function Dashboard(){
                                                     }
                                                     {card.spreadRank == 2 && <div className="stat-rank-2">{card.spread}</div>}
                                                     {card.spreadRank == 1 && <div className="stat-rank-1">{card.spread}</div>}
+                                                    <div className="text-gray-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
                                                 </div>
                                                 <div className="flex flex-row p-2 bg-gray-700 border-b-gray-600 border-b text-gray-300">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -133,6 +136,7 @@ export default function Dashboard(){
                                                         </div>}
                                                         {card.moneyLineRank == 2 && <div className="stat-rank-2">{card.moneyLine}</div>}
                                                         {card.moneyLineRank == 1 && <div className="stat-rank-1">{card.moneyLine}</div>}
+                                                        <div className="text-gray-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
                                                    
                                                 </div>
                                                 <div className="flex flex-row p-2 bg-gray-700 border-b-gray-600 border-b text-gray-300">
@@ -153,6 +157,7 @@ export default function Dashboard(){
                                                         }
                                                         {card.totalRank== 2 && <div className="stat-rank-2">{card.total}</div>}
                                                         {card.totalRank == 1 && <div className="stat-rank-2">{card.total}</div>}
+                                                        <div className="text-gray-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
                                                     </div>
                                                 <div className="flex flex-row p-2 bg-gray-700 border-b-gray-600 border-b text-gray-300 ">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
