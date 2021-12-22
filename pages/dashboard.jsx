@@ -99,35 +99,39 @@ export default function Dashboard(){
                     <section className="text-gray-400 bg-gray-800 body-font lg:relative py-8 px-12 z-50">
                         {/* dropdown */}
                         <div class="dropdown">
-                            <div tabindex="0" class="m-1 btn">Dropdown</div> 
-                            <div tabindex="0" class="p-2 shadow menu dropdown-content bg-gray-500 rounded-box w-96 divide-y divide-solid z-50">
+                            <div tabindex="0" class="m-1 btn">League
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                            </div> 
+                            <div tabindex="0" class="p-0 shadow menu dropdown-content bg-gray-700 rounded w-96 divide-y divide-solid z-50">
                                 <div className="flex flex-row flex-wrap">
                                     <div className="card w-2/3">
                                             <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
-                                                <h2 className="card-title">NBA</h2>
+                                                <h2 className="card-title text-red-300/80">🏀 NBA</h2>
                                             </div>
                                     </div>
                                 </div>
-                                <div className="bg-gray-600">
+                                <div className="bg-gray-800">
                                     <div className="flex flex-row flex-wrap">
                                         <div className="card w-1/2">
                                                 <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
-                                                    <h2 className="card-title text-red-400/80">NBA</h2>
+                                                    <h2 className="card-title text-red-300/80">🏀 NBA</h2>
                                                 </div>
                                         </div>
                                         <div className="card w-1/2">
                                             <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
-                                                <h2 className="card-title text-red-200/80">NFL</h2>
+                                                <h2 className="card-title text-red-300/80">🏈 NFL</h2>
                                             </div>
                                         </div>
                                         <div className="card w-1/2">
                                             <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
-                                                <h2 className="card-title text-red-400/80">MLB</h2>
+                                                <h2 className="card-title text-red-300/80">⚾ MLB</h2>
                                             </div>
                                         </div>
                                         <div className="card w-1/2">
                                             <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
-                                                <h2 className="card-title text-red-400/80">NHL</h2>
+                                                <h2 className="card-title text-red-300/80">🏒 NHL</h2>
                                             </div>
                                         </div>
                                     </div>
