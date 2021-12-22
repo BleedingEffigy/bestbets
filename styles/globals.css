@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .stat-rank-3 {
+        @apply text-green-500 tracking-wider leading-none font-bold flex !important;
+    }
+    .stat-rank-2 {
+        @apply text-emerald-300 tracking-wide leading-none !important;
+    }
+    .stat-rank-1 {
+        @apply text-gray-200 tracking-wide leading-none !important; 
+    }
+}
