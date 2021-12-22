@@ -72,9 +72,9 @@ export default function Dashboard(){
     return(
         <div className="bg-slate-800 min-h-screen">
             <header>
-                <div class="navbar mb-2 pb-0 shadow-lg bg-slate-800 text-neutral-content">
+                <div class="navbar mb-2 pb-0 shadow-lg bg-slate-800 text-slate-200">
                     <div class="flex-none">
-                        <button class="btn btn-square btn-ghost">
+                        <button class="btn btn-square btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">           
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>               
                             </svg>
@@ -82,11 +82,11 @@ export default function Dashboard(){
                     </div> 
                     <div class="flex-1 px-2 mx-2 mb-0">
                         <div class="tabs">
-                            <a class="tab tab-bordered text-slate-100 border-b-slate-200 text-base">Models Picks</a> 
-                            <a class="tab tab-bordered text-slate-300">Results</a> 
-                            <a class="tab tab-bordered text-slate-300">Where to Bet</a>
-                            <a class="tab tab-bordered text-slate-300">Beat the Odds</a>
-                            <a class="tab tab-bordered text-slate-300">Prop Data</a>
+                            <a class="tab tab-bordered text-slate-100 font-semibold tracking-wide text-lg border-b-slate-200">Models Picks</a> 
+                            <a class="tab tab-bordered text-slate-300 font-semibold tracking-wide text-base">Results</a> 
+                            <a class="tab tab-bordered text-slate-300 font-semibold tracking-wide text-base">Where to Bet</a>
+                            <a class="tab tab-bordered text-slate-300 font-semibold tracking-wide text-base">Beat the Odds</a>
+                            <a class="tab tab-bordered text-slate-300 font-semibold tracking-wide text-base">Prop Data</a>
                         </div>
                     </div>
                     {/* chat button */}
