@@ -96,13 +96,13 @@ export default function Dashboard(){
                 </div>
             </header>
             <main className="bg-gray-800 mx-auto w-11/12">
-                    <section className="text-gray-400 bg-gray-900 body-font lg:relative py-8 px-12 z-50">
+                    <section className="text-gray-400 bg-gray-800 body-font lg:relative py-8 px-12 z-50">
                         <div className="flex flex-wrap justify-start">
                             {   
                                 cardContent.map( (card,idx) => 
                                     <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
                                         {/* badge */}
-                                        <div class="badge mx-2 bg-transparent font-bold text-fuchsia-500 border-0 bg-gray-100 absolute top-2 right-1 z-50">Best Bet</div>
+                                        <div class="badge mx-2 bg-transparent font-bold text-red-600 border-0 bg-red-100 absolute top-2 right-1 z-50">Best Bet</div>
                                         <div class="card-body bg-gray-700 relative">
                                             {/* banner text */}
                                             <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
@@ -197,7 +197,7 @@ export default function Dashboard(){
                                                     </svg>
                                                     <span>Weather</span>
                                                 </div>
-                                                <div className="flex flex-wrap">
+                                                <div className="flex flex-wrap w-5/6 mx-auto">
                                                     <div className="w-1/2">Clouds <span className="">67F</span></div>
                                                     <div className="w-1/2">Wind <span className="">6mph</span></div>
                                                     <div className="w-1/2">Precipitation <span className="">0%</span></div>
