@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 export default function Dashboard(){
 
@@ -49,6 +50,19 @@ export default function Dashboard(){
             'totalRank': '3'
         },
     ]
+    const [chatOpen, setchatOpen] = useState(false)
+
+    const openChat = () => {
+        document.getElementById("chatbox").style.width = "50%";
+        setchatOpen(!chatOpen)
+    // document.getElementById("main").style.marginLeft = "50%";
+    }
+
+    const closeChat = () => {
+        document.getElementById("chatbox").style.width = "0";
+        setchatOpen(!chatOpen)
+        // document.getElementById("main").style.marginLeft = "0";
+    }
     
     return(
         <div className="bg-gray-800 min-h-screen">
@@ -69,12 +83,14 @@ export default function Dashboard(){
                             <a class="tab tab-bordered text-gray-300">Beat the Odds</a>
                             <a class="tab tab-bordered text-gray-300">Prop Data</a>
                         </div>
-                    </div> 
-                    <div class="flex-none">
-                        <button class="btn btn-square btn-ghost">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current">      
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>                    
+                    </div>
+                    {/* chat button */}
+                    <div class="">
+                        <button class="btn btn-sm btn-outline text-indigo-600/80 text-base font-bold tracking-wider border-2 p-0.5" onClick={() => chatOpen ? closeChat() : openChat()}>
+                            <svg role="img" className="fill-indigo-300 w-6 h-6 mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title>
+                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
                             </svg>
+                            Chat
                         </button>
                     </div>
                 </div>
@@ -198,6 +214,40 @@ export default function Dashboard(){
                     </section> 
 
             </main>
+
+            {/* Chatbox sidebar */}
+            <div id="chatbox" className="mb-10 z-50" 
+                    style={{'height': '100%',
+                    'width': 0,
+                    'position': 'fixed',
+                    'z-index': 1,
+                    'top': 0,
+                    'left': 0,
+                ' backgroundColor': '#111',
+                    'overflow-x': 'hidden',
+                ' transition': '0.5s'}}
+            >
+                <section className="text-gray-400 bg-transparent body-font relative">
+                <button className="btn glass border-0 absolute top-0 right-0" onClick={() => closeChat()}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <div className="flex justify-center md:h-screen">
+                    {/* <!-- <div className="blur-sm relative">
+                    <img src="/assets/DiscordChat.png"/>
+
+                    </div>
+                    <div className="absolute mt-6">
+                    <button className="inline-block px-4 py-3 text-sm font-semibold text-center text-white uppercase transition duration-200 ease-in-out bg-indigo-500 rounded-md cursor-pointer hover:bg-indigo-600">
+                        <svg className="h-6 w-6" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        Sign in
+                    </button>
+                    </div> --> */}
+                    <iframe src="https://e.widgetbot.io/channels/920025055101063231/920025055101063234" height="100%" width="100%"></iframe>
+                </div>
+                </section>
+            </div>
 
         </div>
     )
