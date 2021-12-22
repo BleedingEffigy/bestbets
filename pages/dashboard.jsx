@@ -97,12 +97,50 @@ export default function Dashboard(){
             </header>
             <main className="bg-gray-800 mx-auto w-11/12">
                     <section className="text-gray-400 bg-gray-800 body-font lg:relative py-8 px-12 z-50">
+                        {/* dropdown */}
+                        <div class="dropdown">
+                            <div tabindex="0" class="m-1 btn">Dropdown</div> 
+                            <div tabindex="0" class="p-2 shadow menu dropdown-content bg-gray-500 rounded-box w-96 divide-y divide-solid z-50">
+                                <div className="flex flex-row flex-wrap">
+                                    <div className="card w-2/3">
+                                            <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
+                                                <h2 className="card-title">NBA</h2>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div className="bg-gray-600">
+                                    <div className="flex flex-row flex-wrap">
+                                        <div className="card w-1/2">
+                                                <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
+                                                    <h2 className="card-title text-red-400/80">NBA</h2>
+                                                </div>
+                                        </div>
+                                        <div className="card w-1/2">
+                                            <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
+                                                <h2 className="card-title text-red-200/80">NFL</h2>
+                                            </div>
+                                        </div>
+                                        <div className="card w-1/2">
+                                            <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
+                                                <h2 className="card-title text-red-400/80">MLB</h2>
+                                            </div>
+                                        </div>
+                                        <div className="card w-1/2">
+                                            <div className="card-body border-8 border-transparent hover:border-red-400/80 hover:border-solid">
+                                                <h2 className="card-title text-red-400/80">NHL</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="flex flex-wrap justify-start">
                             {   
                                 cardContent.map( (card,idx) => 
                                     <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
                                         {/* badge */}
-                                        <div class="badge mx-2 bg-transparent font-bold text-red-600 border-0 bg-red-100 absolute top-2 right-1 z-50">Best Bet</div>
+                                        <div class="badge mx-2 bg-transparent font-bold text-red-600 border-0 bg-red-100 absolute top-2 right-1 z-40">Best Bet</div>
                                         <div class="card-body bg-gray-700 relative">
                                             {/* banner text */}
                                             <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
@@ -114,7 +152,7 @@ export default function Dashboard(){
                                             {/* stats chart */}
                                             <div className="flex flex-col font-semibold text-gray-900 p-1 rounded-lg bg-gray-700 shadow-md z-10">
                                                 {/* Spread Chart */}
-                                                <div className="flex flex-row p-2 bg-gray-700 border-b-gray-600 border-b text-gray-300 min-w-full">
+                                                <div className="flex flex-row p-2 bg-gray-700 border-b-gray-600 border-b hover:border-b-dash text-gray-300 min-w-full">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>
