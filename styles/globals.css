@@ -7,9 +7,9 @@
         @apply text-green-500 tracking-wider leading-none font-bold flex rounded-md text-xl ml-auto !important;
     }
     .stat-rank-2 {
-        @apply text-emerald-300 tracking-wide leading-none rounded-md text-xl ml-auto !important;
+        @apply text-amber-300 tracking-wide leading-none rounded-md text-xl ml-auto !important;
     }
     .stat-rank-1 {
-        @apply text-gray-200 tracking-wide leading-none rounded-md text-xl ml-auto !important; 
+        @apply text-rose-400 tracking-wide leading-none rounded-md text-xl ml-auto !important; 
     }
 }
