@@ -139,7 +139,7 @@ export default function Dashboard(){
             <main className="bg-slate-800 mx-auto w-11/12">
                     <section className="text-slate-400 bg-slate-800 body-font lg:relative pb-8 px-12 z-50">
                         {/* dropdown */}
-                        <div class="dropdown mb-4">
+                        <div class="dropdown mb-4 -left-6">
                             <div tabindex="0" class="m-1 btn bg-slate-700">League
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
