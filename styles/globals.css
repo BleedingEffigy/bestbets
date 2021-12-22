@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer components {
     .stat-rank-3 {
         @apply text-green-500 tracking-wider leading-none font-bold flex !important;
     }
