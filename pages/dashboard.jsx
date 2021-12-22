@@ -99,39 +99,40 @@ export default function Dashboard(){
                     <section className="text-slate-400 bg-slate-800 body-font lg:relative py-8 px-12 z-50">
                         {/* dropdown */}
                         <div class="dropdown mb-4">
-                            <div tabindex="0" class="m-1 btn">League
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div tabindex="0" class="m-1 btn bg-slate-700">League
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                             </div> 
                             <div tabindex="0" class="p-0 shadow menu dropdown-content bg-slate-700 rounded w-96 divide-y divide-solid z-50">
                                 <div className="flex flex-row flex-wrap">
                                     <div className="card w-2/3 group">
-                                            <div className="card-body border-8 border-transparent ">
-                                                <h2 className="card-title text-red-300/80 group-hover:scale-125">🏀 NBA</h2>
+                                            <div className="card-body">
+                                                <h2 className="card-title text-red-300/80 tracking-wider group-hover:scale-125 duration-200">🏀 NBA</h2>
                                             </div>
                                     </div>
                                 </div>
                                 <div className="bg-slate-800">
+                                    <h2 className="text-2xl text-slate-200 tracking-widest ml-4 mt-2">Leagues</h2>
                                     <div className="flex flex-row flex-wrap">
                                         <div className="card w-1/2 group">
-                                                <div className="card-body border-8 border-transparent ">
-                                                    <h2 className="card-title text-red-300/80 group-hover:scale-125">🏀 NBA</h2>
+                                                <div className="card-body">
+                                                    <h2 className="card-title text-red-300/80 tracking-wider group-hover:scale-125 duration-200">🏀 NBA</h2>
                                                 </div>
                                         </div>
                                         <div className="card w-1/2 group">
-                                            <div className="card-body border-8 border-transparent ">
-                                                <h2 className="card-title text-red-300/80 group-hover:scale-125">🏈 NFL</h2>
+                                            <div className="card-body">
+                                                <h2 className="card-title text-red-300/80 tracking-wider group-hover:scale-125 duration-200">🏈 NFL</h2>
                                             </div>
                                         </div>
                                         <div className="card w-1/2 group">
-                                            <div className="card-body border-8 border-transparent ">
-                                                <h2 className="card-title text-red-300/80 group-hover:scale-125">⚾ MLB</h2>
+                                            <div className="card-body">
+                                                <h2 className="card-title text-red-300/80 tracking-wider group-hover:scale-125 duration-200">⚾ MLB</h2>
                                             </div>
                                         </div>
                                         <div className="card w-1/2 group">
-                                            <div className="card-body border-8 border-transparent ">
-                                                <h2 className="card-title text-red-300/80 group-hover:scale-125">🏒 NHL</h2>
+                                            <div className="card-body">
+                                                <h2 className="card-title text-red-300/80 tracking-wider group-hover:scale-125 duration-200">🏒 NHL</h2>
                                             </div>
                                         </div>
                                     </div>
