@@ -79,17 +79,15 @@ export default function Dashboard(){
                     </div>
                 </div>
             </header>
-            <main className="bg-gray-800 mx-auto w-10/12">
-                <div class="">
-
-                    <section className="text-gray-400 bg-gray-800 body-font lg:relative py-8 px-12 z-50">
-                        <div className="flex flex-wrap space-x-1 justify-around">
+            <main className="bg-gray-800 mx-auto w-11/12">
+                    <section className="text-gray-400 bg-gray-900 body-font lg:relative py-8 px-12 z-50">
+                        <div className="flex flex-wrap justify-around">
                             {   
                                 cardContent.map( (card,idx) => 
-                                    <div class="card bg-gray-700 compact w-1/4 relative mb-10 shadow-2xl" key={idx}>
+                                    <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
                                         {/* badge */}
                                         <div class="badge mx-2 bg-transparent font-bold text-fuchsia-500 border-0 bg-gray-100 absolute top-2 right-1 z-50">Best Bet</div>
-                                        <div class="card-body">
+                                        <div class="card-body bg-gray-700 relative">
                                             {/* banner text */}
                                             <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
                                                 <h3 className="font-light text-gray-800/80 tracking-widest">Kickoff 12/13 at 7:20PM CST</h3> 
@@ -193,7 +191,7 @@ export default function Dashboard(){
                             }
                         </div>
                     </section> 
-                </div>
+
             </main>
 
         </div>
