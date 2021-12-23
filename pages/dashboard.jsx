@@ -236,17 +236,7 @@ export default function Dashboard(){
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>
                                                     <div className="text-slate-400 font-medium tracking-tight">Over/Under</div>
-                                                        {card.totalRank == 3 && 
-                                                        <div className="stat-rank-3 rounded-md text-xl ml-auto">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                            </svg>
-                                                            {card.total}
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                            </svg>
-                                                        </div>
-                                                        }
+                                                        {card.totalRank == 3 && <div className="stat-rank-3">{card.total}</div>}
                                                         {card.totalRank== 2 && <div className="stat-rank-2">{card.total}</div>}
                                                         {card.totalRank == 1 && <div className="stat-rank-2">{card.total}</div>}
                                                         <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
