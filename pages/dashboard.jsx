@@ -251,13 +251,11 @@ export default function Dashboard(){
                                     </div>
                                 </div>
                             </div>
+
+                            {/* List of Games and their Picks */}
                             {   
                                 cardContent.map( (card,idx) => 
                                     <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
-                                        {/* badge */}
-                                        { card.isBestBet && 
-                                        <div class="badge mx-2 bg-transparent font-bold text-red-600 border-0 bg-red-100 absolute top-2 right-1 z-40">Best Bet</div>
-                                        }
                                         <div class="card-body bg-slate-700 relative">
                                             {/* banner text */}
                                             <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
@@ -285,16 +283,7 @@ export default function Dashboard(){
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                                                     </svg>
                                                     <div className="text-slate-400 font-medium tracking-tight">Winner</div>
-                                                        {card.moneyLineRank == 3 && 
-                                                        <div className="stat-rank-3">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                            </svg>
-                                                            {card.moneyLine}
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                            </svg>
-                                                        </div>}
+                                                        {card.moneyLineRank == 3 && <div className="stat-rank-3">{card.moneyLine}</div>}
                                                         {card.moneyLineRank == 2 && <div className="stat-rank-2">{card.moneyLine}</div>}
                                                         {card.moneyLineRank == 1 && <div className="stat-rank-1">{card.moneyLine}</div>}
                                                         <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
@@ -306,8 +295,8 @@ export default function Dashboard(){
                                                     </svg>
                                                     <div className="text-slate-400 font-medium tracking-tight">Over/Under</div>
                                                         {card.totalRank == 3 && <div className="stat-rank-3">{card.total}</div>}
-                                                        {card.totalRank== 2 && <div className="stat-rank-2">{card.total}</div>}
-                                                        {card.totalRank == 1 && <div className="stat-rank-2">{card.total}</div>}
+                                                        {card.totalRank == 2 && <div className="stat-rank-2">{card.total}</div>}
+                                                        {card.totalRank == 1 && <div className="stat-rank-1">{card.total}</div>}
                                                         <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
                                                     </div>
                                                 <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300 ">
@@ -325,6 +314,7 @@ export default function Dashboard(){
                                                     <div className="text-slate-500 rounded-md text-xl tracking-wide leading-none ml-auto">-</div>
                                                 </div>
                                             </div>
+                                            {/* weather */}
                                             <div id="weather" className="pt-5">
                                                 <div className="flex mb-2 text-slate-200">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
