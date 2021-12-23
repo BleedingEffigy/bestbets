@@ -135,7 +135,7 @@ export default function Dashboard(){
                         </div>
                     </div>
                     {/* chat button */}
-                    <div class="">
+                    <div class="bg-red-500 sm:bg-yellow-500 md:bg-orange-500 lg:bg-green-500 xl:bg-rose-500 2xl:bg-blue-500">
                         <button class="btn btn-sm btn-outline text-indigo-600/80 text-base font-bold tracking-wider border-2 p-0.5" onClick={() => chatOpen ? closeChat() : openChat()}>
                             <svg role="img" className="fill-indigo-300 w-6 h-6 mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title>
                                 <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
@@ -225,113 +225,117 @@ export default function Dashboard(){
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap justify-start">
+                        <div className="flex flex-wrap justify-center lg:justify-start">
                             {/* Top Picks Card */}
-                            <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl">
-                                <div class="card-body bg-slate-700 relative">
-                                    {/* banner text */}
-                                    <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
-                                        <h3 className="font-light text-base text-slate-800/80 tracking-widest">Refreshed Daily</h3> 
-                                        <h2 class="card-title text-xl font-bold tracking-wider text-black/80">Top Picks</h2>
-                                    </div>
-                                    {/* banner bg */}
-                                    <div className="bg-gradient-to-br from-red-500 via-red-400 to-red-200 absolute -mx-4 -top-3 w-full h-1/3 z-0"></div>
-                                    {/* stats chart */}
-                                    <div className="flex flex-col font-semibold text-slate-900 p-1 rounded-lg bg-slate-700 shadow-md z-10">
-                                        {/* Top Picks */}
-                                        { topPicks.map( (pick,idx) => 
-                                            <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b hover:border-b-dash text-slate-300 min-w-full" key={idx}>
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                                <div className="text-slate-400 font-medium tracking-tight">{pick.type}</div>
-                                                {/* conditional render dependent on spread rank */}
-                                                <div className="stat-rank-3">{pick.pick}</div>
-                                                <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
-                                            </div>
-                                        )}
+                            <div className="w-11/12 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 relative mb-10 ">
+                                <div class="card compact mx-8 xl:px-2 shadow-2xl">
+                                    <div class="card-body bg-slate-700 relative">
+                                        {/* banner text */}
+                                        <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
+                                            <h3 className="font-light text-base text-slate-800/80 tracking-widest">Refreshed Daily</h3> 
+                                            <h2 class="card-title text-xl font-bold tracking-wider text-black/80">Top Picks</h2>
+                                        </div>
+                                        {/* banner bg */}
+                                        <div className="bg-gradient-to-br from-red-500 via-red-400 to-red-200 absolute -mx-4 -top-3 w-full h-1/3 z-0"></div>
+                                        {/* stats chart */}
+                                        <div className="flex flex-col font-semibold text-slate-900 p-1 rounded-lg bg-slate-700 shadow-md z-10">
+                                            {/* Top Picks */}
+                                            { topPicks.map( (pick,idx) => 
+                                                <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b hover:border-b-dash text-slate-300 min-w-full" key={idx}>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                    <div className="text-slate-400 font-medium tracking-tight hidden md:inline">{pick.type}</div>
+                                                    {/* conditional render dependent on spread rank */}
+                                                    <div className="stat-rank-3">{pick.pick}</div>
+                                                    <div className="text-slate-400 font-extralight md:font-medium tracking-tight text-xs md:text-sm ml-auto"> GB-93%|7%-CHI</div>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* List of Games and their Picks */}
-                            {   
+                            {       
                                 cardContent.map( (card,idx) => 
-                                    <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
-                                        <div class="card-body bg-slate-700 relative">
-                                            {/* banner text */}
-                                            <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
-                                                <h3 className="font-light text-slate-800/80 tracking-widest">Kickoff 12/13 at 7:20PM CST</h3> 
-                                                <h2 class="card-title text-base font-bold tracking-wider text-black/80">{card.title}</h2>
-                                            </div>
-                                            {/* banner bg */}
-                                            <div className="bg-gradient-to-br from-lime-300 via-lime-300 to-lime-100 absolute -mx-4 -top-3 w-full h-1/3 z-0"></div>
-                                            {/* stats chart */}
-                                            <div className="flex flex-col font-semibold text-slate-900 p-1 rounded-lg bg-slate-700 shadow-md z-10">
-                                                {/* Spread Chart */}
-                                                <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b hover:border-b-dash text-slate-300 min-w-full">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                    <div className="text-slate-400 font-medium tracking-tight">Spread</div>
-                                                    {/* conditional render dependent on spread rank */}
-                                                    {card.spreadRank == 3 && <div className="stat-rank-3">{card.spread}</div>}
-                                                    {card.spreadRank == 2 && <div className="stat-rank-2">{card.spread}</div>}
-                                                    {card.spreadRank == 1 && <div className="stat-rank-1">{card.spread}</div>}
-                                                    <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
+                                    <div className="w-11/12 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 relative mb-10">
+                                        <div class="card compact mx-8 xl:px-2 shadow-2xl" key={idx}>
+                                            <div class="card-body bg-slate-700 relative">
+                                                {/* banner text */}
+                                                <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
+                                                    <h3 className="font-light text-slate-800/80 tracking-widest">Kickoff 12/13 at 7:20PM CST</h3> 
+                                                    <h2 class="card-title text-base font-bold tracking-wider text-black/80">{card.title}</h2>
                                                 </div>
-                                                <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                                                    </svg>
-                                                    <div className="text-slate-400 font-medium tracking-tight">Winner</div>
-                                                        {card.moneyLineRank == 3 && <div className="stat-rank-3">{card.moneyLine}</div>}
-                                                        {card.moneyLineRank == 2 && <div className="stat-rank-2">{card.moneyLine}</div>}
-                                                        {card.moneyLineRank == 1 && <div className="stat-rank-1">{card.moneyLine}</div>}
-                                                        <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
-                                                   
-                                                </div>
-                                                <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                    <div className="text-slate-400 font-medium tracking-tight">Over/Under</div>
-                                                        {card.totalRank == 3 && <div className="stat-rank-3">{card.total}</div>}
-                                                        {card.totalRank == 2 && <div className="stat-rank-2">{card.total}</div>}
-                                                        {card.totalRank == 1 && <div className="stat-rank-1">{card.total}</div>}
+                                                {/* banner bg */}
+                                                <div className="bg-gradient-to-br from-lime-300 via-lime-300 to-lime-100 absolute -mx-4 -top-3 w-full h-1/3 z-0"></div>
+                                                {/* stats chart */}
+                                                <div className="flex flex-col font-semibold text-slate-900 p-1 rounded-lg bg-slate-700 shadow-md z-10">
+                                                    {/* Spread Chart */}
+                                                    <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b hover:border-b-dash text-slate-300 min-w-full">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                        </svg>
+                                                        <div className="text-slate-400 font-medium tracking-tight hidden md:inline">Spread</div>
+                                                        {/* conditional render dependent on spread rank */}
+                                                        {card.spreadRank == 3 && <div className="stat-rank-3">{card.spread}</div>}
+                                                        {card.spreadRank == 2 && <div className="stat-rank-2">{card.spread}</div>}
+                                                        {card.spreadRank == 1 && <div className="stat-rank-1">{card.spread}</div>}
                                                         <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
                                                     </div>
-                                                <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300 ">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                    <div className="text-slate-400 font-medium tracking-tight">Best Props</div>
-                                                    <div className="text-slate-500 rounded-md text-xl tracking-wide leading-none ml-auto">-</div>
+                                                    <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                                                        </svg>
+                                                        <div className="text-slate-400 font-medium tracking-tight hidden md:inline">Winner</div>
+                                                            {card.moneyLineRank == 3 && <div className="stat-rank-3">{card.moneyLine}</div>}
+                                                            {card.moneyLineRank == 2 && <div className="stat-rank-2">{card.moneyLine}</div>}
+                                                            {card.moneyLineRank == 1 && <div className="stat-rank-1">{card.moneyLine}</div>}
+                                                            <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
+                                                    
+                                                    </div>
+                                                    <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                        </svg>
+                                                        <div className="text-slate-400 font-medium tracking-tight hidden md:inline">Over/Under</div>
+                                                            {card.totalRank == 3 && <div className="stat-rank-3">{card.total}</div>}
+                                                            {card.totalRank == 2 && <div className="stat-rank-2">{card.total}</div>}
+                                                            {card.totalRank == 1 && <div className="stat-rank-1">{card.total}</div>}
+                                                            <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
+                                                        </div>
+                                                    <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300 ">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                        </svg>
+                                                        <div className="text-slate-400 font-medium tracking-tight hidden md:inline">Best Props</div>
+                                                        <div className="text-slate-500 rounded-md text-xl tracking-wide leading-none ml-auto">-</div>
+                                                    </div>
+                                                    <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300 ">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                        </svg>
+                                                        <div className="text-slate-400 font-medium tracking-tight hidden md:inline">L10 ATS</div>
+                                                        <div className="text-slate-500 rounded-md text-xl tracking-wide leading-none ml-auto">-</div>
+                                                    </div>
                                                 </div>
-                                                <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b text-slate-300 ">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                    </svg>
-                                                    <div className="text-slate-400 font-medium tracking-tight">L10 ATS</div>
-                                                    <div className="text-slate-500 rounded-md text-xl tracking-wide leading-none ml-auto">-</div>
+                                                {/* weather */}
+                                                <div id="weather" className="pt-5">
+                                                    <div className="flex mb-2 text-slate-200">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                                                        </svg>
+                                                        <span>Weather</span>
+                                                    </div>
+                                                    <div className="flex flex-wrap w-5/6 mx-auto">
+                                                        <div className="w-1/2">Clouds <span className="">67F</span></div>
+                                                        <div className="w-1/2">Wind <span className="">6mph</span></div>
+                                                        <div className="w-1/2">Precipitation <span className="">0%</span></div>
+                                                        <div className="w-1/2">Humidity <span className="">265</span></div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            {/* weather */}
-                                            <div id="weather" className="pt-5">
-                                                <div className="flex mb-2 text-slate-200">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                                                    </svg>
-                                                    <span>Weather</span>
+                                                <div class="justify-end card-actions">
                                                 </div>
-                                                <div className="flex flex-wrap w-5/6 mx-auto">
-                                                    <div className="w-1/2">Clouds <span className="">67F</span></div>
-                                                    <div className="w-1/2">Wind <span className="">6mph</span></div>
-                                                    <div className="w-1/2">Precipitation <span className="">0%</span></div>
-                                                    <div className="w-1/2">Humidity <span className="">265</span></div>
-                                                </div>
-                                            </div>
-                                            <div class="justify-end card-actions">
                                             </div>
                                         </div>
                                     </div>
