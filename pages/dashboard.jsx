@@ -101,16 +101,18 @@ export default function Dashboard(){
     const [chatOpen, setchatOpen] = useState(false)
 
     const openChat = () => {
-        document.getElementById("chatbox").style.width = "50%";
+        document.getElementById("chatbox").style.width = "35%";
         setchatOpen(!chatOpen)
-    // document.getElementById("main").style.marginLeft = "50%";
+        document.getElementById("main").style.marginLeft = "35%";
+        document.getElementById("main").style.width = "65%";
     }
 
     const closeChat = () => {
         document.getElementById("chatbox").style.width = "0";
         setchatOpen(!chatOpen)
-        // document.getElementById("main").style.marginLeft = "0";
-    }
+        document.getElementById("main").style.marginLeft = "auto";
+        document.getElementById("main").style.marginRight = "auto";
+        document.getElementById("main").style.width = "91.666667%";}
     
     return(
         <div className="bg-slate-800 min-h-screen">
@@ -178,8 +180,8 @@ export default function Dashboard(){
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
                 </p>
             </div> */}
-            <main className="bg-slate-800 mx-auto w-11/12">
-                    <section className="text-slate-400 bg-slate-800 body-font lg:relative pb-8 px-12 z-50">
+            <main className="bg-slate-800 mx-auto w-11/12" id="main">
+                    <section className="text-slate-400 bg-slate-800 body-font lg:relative pb-8 2xl:px-12 z-50">
                         {/* dropdown */}
                         <div class="dropdown mb-4 -left-6">
                             <div tabindex="0" class="m-1 btn bg-slate-700">League
