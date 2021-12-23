@@ -28,7 +28,7 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:max-w-4xl z-0 lg:w-full md:w-1/2 w-5/6 lg:mt-24 lg:absolute lg:inset-y-0 lg:-right-1/4 xl:-right-12">
-              <img className="object-cover object-center rounded" alt="hero" src="https://props.cash/desktop.png"/>
+              <img className="object-cover object-center rounded" alt="hero" src="/BestBetsAlgo.png"/>
             </div>
           </div>
         </section>
