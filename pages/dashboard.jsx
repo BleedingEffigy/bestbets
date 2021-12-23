@@ -56,6 +56,48 @@ export default function Dashboard(){
             isBestBet: false
         },
     ]
+    const topPicks = [
+        {
+            type: 'Over/Under',
+            pick: 'Over 44.0',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Winner',
+            pick: 'Cincinnati',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Over/Under',
+            pick: 'Over 53.5',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Winner',
+            pick: 'Philadelphia',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Over/Under',
+            pick: 'Over 46.5',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Spread',
+            pick: 'ATL +8.5',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Over/Under',
+            pick: 'Under 44.5',
+            public: 'GB-93%|7%-CHI',
+        },
+        {
+            type: 'Spread',
+            pick: 'GB -7.5',
+            public: 'GB-93%|7%-CHI',
+        },
+    ]    
     const [chatOpen, setchatOpen] = useState(false)
 
     const openChat = () => {
@@ -127,7 +169,7 @@ export default function Dashboard(){
 
                 </div>
             </header>
-            {/* oepning banner */}
+            {/* opening banner */}
             {/* <div className="bg-red-100 text-red-600 w-full">
                 <h1 class=" text-5xl font-bold">
                     Model Picks
@@ -182,6 +224,33 @@ export default function Dashboard(){
                         </div>
 
                         <div className="flex flex-wrap justify-start">
+                            {/* Top Picks Card */}
+                            <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl">
+                                <div class="card-body bg-slate-700 relative">
+                                    {/* banner text */}
+                                    <div className="bg-transparent -mx-4 -mt-4 px-4 pt-3 pb-3 z-10 h-1/4">
+                                        <h3 className="font-light text-base text-slate-800/80 tracking-widest">Refreshed Daily</h3> 
+                                        <h2 class="card-title text-xl font-bold tracking-wider text-black/80">Top Picks</h2>
+                                    </div>
+                                    {/* banner bg */}
+                                    <div className="bg-gradient-to-br from-red-500 via-red-400 to-red-200 absolute -mx-4 -top-3 w-full h-1/3 z-0"></div>
+                                    {/* stats chart */}
+                                    <div className="flex flex-col font-semibold text-slate-900 p-1 rounded-lg bg-slate-700 shadow-md z-10">
+                                        {/* Top Picks */}
+                                        { topPicks.map( (pick,idx) => 
+                                            <div className="flex flex-row p-2 bg-slate-700 border-b-slate-600 border-b hover:border-b-dash text-slate-300 min-w-full" key={idx}>
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                <div className="text-slate-400 font-medium tracking-tight">{pick.type}</div>
+                                                {/* conditional render dependent on spread rank */}
+                                                <div className="stat-rank-3">{pick.pick}</div>
+                                                <div className="text-slate-400 font-medium tracking-tight text-sm ml-auto"> GB-93%|7%-CHI</div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
                             {   
                                 cardContent.map( (card,idx) => 
                                     <div class="card compact w-1/3 relative px-2 mb-10 shadow-2xl" key={idx}>
