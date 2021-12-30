@@ -99,31 +99,49 @@ export default function Dashboard(){
         },
     ]    
 
-    const widths = 
-    {
-        '3/4':'',
-    }
-
     const [chatOpen, setchatOpen] = useState(false)
+    const [screenWidth, setScreenWidth] = useState('')
+    const [cardWidth, setCardWidth] = useState('')
     const [mobileNavBarOpen, setMobileNavBarOpen] = useState(false)
 
-    const openChat = async () => {
+    const openChat = () => {
         document.getElementById("chatbox").style.width = "35%";
         setchatOpen(!chatOpen)
+        // extract and save screenwidth
         let main = document.getElementById("main")
         let mainStyles = window.getComputedStyle(main)
+        let currentWidth = mainStyles.getPropertyValue('width')
+        setScreenWidth(currentWidth)
+        // get pick width
+        let picks = document.getElementsByClassName("pick")
+        const cardWidth = window.getComputedStyle(picks[0]).getPropertyValue('width')
+        setCardWidth(cardWidth)
+        for(const pick of picks){
+            pick.style.width = "55%"
+            pick.style.marginLeft = "auto"
+            pick.style.marginRight = "auto"
+        }
+        // shrink main section
         document.getElementById("main").style.marginLeft = "35%";
-        console.log("main style is" + mainStyles.getPropertyValue('background-color'))
         document.getElementById("main").style.width = "65%";
+
     }
 
     const closeChat = () => {
         document.getElementById("chatbox").style.width = "0";
         setchatOpen(!chatOpen)
+        // restore margins
         document.getElementById("main").style.marginLeft = "auto";
         document.getElementById("main").style.marginRight = "auto";
-        //change width
-        document.getElementById("main").style.width = "65%";}
+        // restore width
+        document.getElementById("main").style.width = screenWidth;
+        // restore card width
+        let picks = document.getElementsByClassName("pick")
+        for(const pick of picks){
+            pick.style.width = cardWidth
+        }
+
+    }
     
     const openMobileNav = () => {
 
@@ -155,7 +173,7 @@ export default function Dashboard(){
                         </div>
                     </div>
                     {/* chat button */}
-                    <div class="bg-red-500 sm:bg-yellow-500 md:bg-orange-500 lg:bg-green-500 xl:bg-rose-500 2xl:bg-blue-500">
+                    <div id='small' class="bg-red-500 sm:bg-yellow-500 md:bg-orange-500 lg:bg-green-500 xl:bg-rose-500 2xl:bg-blue-500">
                         {/* small button */}
                         <button class=" btn btn-sm btn-outline text-indigo-600/80 text-base font-bold tracking-wider border-2 p-0.5" onClick={() => chatOpen ? closeChat() : openChat()}>
                             <svg role="img" className="fill-indigo-300 w-6 h-6 mr-1 inline" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title>
@@ -248,7 +266,7 @@ export default function Dashboard(){
 
                         <div className="flex flex-wrap justify-center xl:justify-start">
                             {/* Top Picks Card */}
-                            <div className="w-11/12 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 relative mb-10 ">
+                            <div className="pick w-11/12 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 relative mb-10 ">
                                 <div class="card compact mx-8 xl:px-2 shadow-2xl">
                                     <div class="card-body bg-slate-700 relative">
                                         {/* banner text */}
@@ -280,7 +298,7 @@ export default function Dashboard(){
                             {/* List of Games and their Picks */}
                             {       
                                 cardContent.map( (card,idx) => 
-                                    <div className="w-11/12 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 relative mb-10">
+                                    <div className="pick w-11/12 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-1/3 relative mb-10">
                                         <div class="card compact mx-8 xl:px-2 shadow-2xl" key={idx}>
                                             <div class="card-body bg-slate-700 relative">
                                                 {/* banner text */}
