@@ -17,7 +17,7 @@ export default function FeaturesSection() {
                     <div className="flex flex-col mb-10 lg:items-start items-center">
                         <div className="flex-grow">
                         <h2 className="text-white text-3xl title-font font-bold tracking-wide mb-3">Our Mission</h2>
-                        <p className="leading-relaxed text-lg font-semibold tracking-wide">To become the ultimate source of data to help bettors win more money</p>
+                        <p className="leading-relaxed text-xl font-semibold tracking-wide">To become the ultimate source of data to help bettors win more money</p>
                         </div>
                     </div>
 
