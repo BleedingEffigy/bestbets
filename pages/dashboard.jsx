@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
+import Head from 'next/head'
+
 
 export default function Dashboard(){
 
@@ -152,7 +154,13 @@ export default function Dashboard(){
     }
         
     return(
-        <div className="bg-slate-800 min-h-screen">
+        <div className="bg-slate-800 font-poppins min-h-screen">
+            <Head>
+                {/* import poppins */}
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+                <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+            </Head>
             <header>
                 <div class="navbar mb-2 pb-0 shadow-lg bg-slate-800 text-slate-200">
                     {/* mobile navbar button */}

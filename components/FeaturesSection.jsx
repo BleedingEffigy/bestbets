@@ -4,7 +4,7 @@ export default function FeaturesSection() {
     return(
         <>
             {/* <!-- Features --> */}
-            <section className="text-gray-400 bg-gray-900 body-font mx-auto pt-8">
+            <section className="text-gray-400 bg-gray-900 font-poppins mx-auto pt-8">
             <div className="text-center w-3/5 mx-auto">
                 <h1 className="sm:text-3xl text-2xl font-bold tracking-wide title-font text-white mb-4">A science based approach to betting</h1>
                 <p className="text-xl leading-snug tracking-wide font-medium text-gray-400 text-opacity-80">The average bettor researches between 3-8 data points when making decisions; our prediction model researches over 100 data points from each sports, down to the individual player level.</p>

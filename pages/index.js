@@ -14,14 +14,18 @@ export default function Home() {
           <meta name="viewport" content="width=device-width"/>
           <title>Best Bets Algo</title>
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          {/* import poppins */}
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
         </Head>
 
         {/* <!-- Hero --> */}
-        <section className="text-gray-400 bg-gray-900 body-font lg:relative">
+        <section className="text-gray-400 bg-gray-900 font-poppins lg:relative">
           <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center lg:w-5/6 lg:min-h-[85vh]">
             <div className=" md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center z-10">
               <img className='w-12 h-12 mb-8' src='https://pbs.twimg.com/profile_images/1328476463083958273/LK-XBkNw_400x400.jpg'/>
-              <h1 className="title-font sm:text-5xl text-3xl mb-4 font-semibold text-white tracking-wider">Bet on Sports using Data Science</h1>
+              <h1 className="title-font sm:text-6xl text-3xl mb-4 font-semibold text-white tracking-wider font-poppins">Bet on Sports using Data Science</h1>
               <p className="mb-8 text-xl leading-relaxed tracking-tighter">NBA | NFL | MLB | NHL</p>
               <div className="flex w-full md:justify-start justify-center items-end">
                 <button className="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Sign Up</button>
@@ -34,7 +38,7 @@ export default function Home() {
         </section>
 
         {/* <!-- Testimonial --> */}
-        <section className="text-gray-400 bg-gray-800 body-font">
+        <section className="text-gray-400 bg-gray-800 font-poppins">
           <div className="container px-5 pt-5 pb-24 mx-auto">
           <h1 className="text-4xl text-center text-white mb-12 tracking-wide font-semibold">Twitter testimonials</h1>
             <div className="flex flex-wrap -m-4 justify-center">
@@ -53,7 +57,7 @@ export default function Home() {
         <FeaturesSection/>
 
         {/* <!-- Pricing --> */}
-        <section className="text-gray-400 bg-gray-800 body-font overflow-hidden">
+        <section className="text-gray-400 bg-gray-800 font-poppins overflow-hidden">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-20">
               <h1 className="sm:text-5xl text-3xl font-bold title-font tracking-tight mb-2 text-white">Subscription</h1>

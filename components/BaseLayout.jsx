@@ -24,7 +24,7 @@ export default function BaseLayout({ children }) {
             <div className="bg-gray-900 relative">
                 <header className="sticky border-t-4 border-t-lime-500 top-0 z-30">
                     {/* <!-- Nav --> */}
-                    <div className="text-white bg-gray-900/70 body-font">
+                    <div className="text-white bg-gray-900/70 font-poppins">
                         <div className="container mx-auto flex flex-wrap py-1 flex-col md:flex-row items-center">
                             <Link href="/">
                                 <a className="flex title-font font-medium items-center text-white mb-4 p-1 md:mb-0 transition ease-in-out hover:scale-110 rounded">
@@ -101,7 +101,7 @@ export default function BaseLayout({ children }) {
                     'overflow-x': 'hidden',
                 ' transition': '0.5s'}}
             >
-                <section className="text-gray-400 bg-transparent body-font relative">
+                <section className="text-gray-400 bg-transparent font-poppins relative">
                 <button className="btn glass border-0 absolute top-0 right-0" onClick={() => closeChat()}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
