@@ -28,7 +28,7 @@ export default function Home() {
               <h1 className="title-font sm:text-6xl text-3xl mb-4 font-semibold text-white tracking-wider font-poppins">Bet on Sports using Data Science</h1>
               <p className="mb-8 text-xl leading-relaxed tracking-tighter">NBA | NFL | MLB | NHL</p>
               <div className="flex w-full md:justify-start justify-center items-end">
-                <button className="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Sign Up</button>
+                <button className="inline-flex text-white/75 btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Sign Up</button>
               </div>
             </div>
             <div className="lg:max-w-4xl z-0 lg:w-full w-5/6 lg:mt-24 md:absolute md:inset-y-0 md:-right-1/4 xl:-right-12">
