@@ -19,15 +19,15 @@ export default function Home() {
         {/* <!-- Hero --> */}
         <section className="text-gray-400 bg-gray-900 body-font lg:relative">
           <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center lg:w-5/6 lg:min-h-[85vh]">
-            <div className=" md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center z-10">
+            <div className=" md:w-3/4 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center z-10">
               <img className='w-12 h-12 mb-8' src='https://pbs.twimg.com/profile_images/1328476463083958273/LK-XBkNw_400x400.jpg'/>
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-semibold text-white">Bet on Sports using Data Science</h1>
-              <p className="mb-8 text-xl leading-relaxed">NBA | NFL | MLB | NHL</p>
+              <h1 className="title-font sm:text-5xl text-3xl mb-4 font-semibold text-white tracking-wider">Bet on Sports using Data Science</h1>
+              <p className="mb-8 text-xl leading-relaxed tracking-tighter">NBA | NFL | MLB | NHL</p>
               <div className="flex w-full md:justify-start justify-center items-end">
                 <button className="inline-flex text-white btn bg-lime-500 border-0 py-2 px-6 focus:outline-none hover:bg-lime-600 hover:glass rounded-lg text-lg">Sign Up</button>
               </div>
             </div>
-            <div className="lg:max-w-4xl z-0 lg:w-full md:w-1/2 w-5/6 lg:mt-24 lg:absolute lg:inset-y-0 lg:-right-1/4 xl:-right-12">
+            <div className="lg:max-w-4xl z-0 lg:w-full w-5/6 lg:mt-24 md:absolute md:inset-y-0 md:-right-1/4 xl:-right-12">
               <img className="object-cover object-center rounded" alt="hero" src="/BestBetsAlgo.png"/>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function Home() {
         {/* <!-- Testimonial --> */}
         <section className="text-gray-400 bg-gray-800 body-font">
           <div className="container px-5 pt-5 pb-24 mx-auto">
-          <h1 className="text-3xl text-center text-white mb-12">Twitter testimonials</h1>
+          <h1 className="text-4xl text-center text-white mb-12 tracking-wide font-semibold">Twitter testimonials</h1>
             <div className="flex flex-wrap -m-4 justify-center">
               <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <Tweet tweetId='1469693588904755208'/>
@@ -56,10 +56,10 @@ export default function Home() {
         <section className="text-gray-400 bg-gray-800 body-font overflow-hidden">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-20">
-              <h1 className="sm:text-4xl text-3xl font-bold title-font mb-2 text-white">Subscription</h1>
+              <h1 className="sm:text-5xl text-3xl font-bold title-font tracking-tight mb-2 text-white">Subscription</h1>
               <p className="lg:w-2/3 mx-auto text-xl leading-relaxed text-base">2 plans to choose from</p>
             </div>
-            <div className="flex flex-wrap -m-4 justify-center">
+            <div className="flex flex-wrap -m-4 justify-center items-end">
               <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
                 <div className="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-yellow-200">
                   <h2 className="text-sm tracking-widest text-gray-500 title-font mb-1 font-medium">BUSINESS</h2>
@@ -96,7 +96,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
-                <div className="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-yellow-200">
+                <div className="h-full p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden border-t-4 border-t-red-500">
                   <h2 className="text-sm tracking-widest text-gray-500 title-font mb-1 font-medium">SPECIAL</h2>
                   <h1 className="text-7xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
                     <span>$199</span>
